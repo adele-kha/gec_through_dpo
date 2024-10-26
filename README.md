@@ -2,11 +2,12 @@
 
 This project focuses on fine-tuning the t5-small model for grammatical error correction (GEC) with a multi-step training approach:
 
+
 Stage 1: Fine-tuning the pre-trained T5 model on the Grammarly CoEdit dataset, which contains sentence pairs of grammatically incorrect (source) and corrected (target) sentences.
 
 Stage 2 (DPO): A dataset is created using edit distance to choose between two corrected sentences, and the fine-tuned model is further trained using Direct Preference Optimization (DPO). The sentence that is closer in distance to the target is chosen as the new source sentence. 
 
-Alternative Stage 2 (Contrastive Loss): Instead of using DPO, we fine-tune the model using a contrastive loss function (triplet loss) with the same dataset. In this variant, the sentence that is further away from the target is treated as a negative example and the sentence that is closer as positive.
+Alternative Stage 2 (Contrastive loss): Instead of using DPO, we fine-tune the model using a contrastive loss function (triplet loss) with the same dataset. In this variant, the sentence that is further away from the target is treated as a negative example and the sentence that is closer as positive.
 
 Each time for evaluation, we use BLEU. BLEU (Bilingual Evaluation Understudy) is a metric used to evaluate the quality of machine-generated text, particularly in tasks like machine translation and text generation. It measures how similar the generated text is to one or more reference texts by comparing the n-grams (contiguous sequences of n items) in the generated output to those in the reference texts.
 
