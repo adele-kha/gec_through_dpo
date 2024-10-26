@@ -1,4 +1,4 @@
-#Fine-Tuning T5-Small for Grammatical Error Correction (GEC) Using Grammarly CoEdit Dataset
+# Fine-Tuning T5-Small for Grammatical Error Correction (GEC) Using Grammarly CoEdit Dataset
 
 This project focuses on fine-tuning the t5-small model for grammatical error correction (GEC) with a multi-step training approach:
 
